@@ -39,6 +39,7 @@ local function isSelfCreated(...)
 end
 
 -- Register Definitions
+-- This fires each time a player equip's and item and calls the "isSelfCreated()" function
 self_made_achievement:SetScript("OnEvent", function(self, event, ...)
 	local arg = { ... }
 	if event == "PLAYER_EQUIPMENT_CHANGED" then
