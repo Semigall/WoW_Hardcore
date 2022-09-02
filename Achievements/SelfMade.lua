@@ -21,6 +21,8 @@ function self_made_achievement:Unregister()
 	self_made_achievement:UnregisterEvent("PLAYER_EQUIPMENT_CHANGED")
 end
 
+-- This function sets initial logic to false, then loops through the tooltip of the item that was equipped. 
+-- If it finds the UnitName("Player") in the text it sets that variable to "true" breaks out of the loop and finishes the failure of the achievement.
 local function isSelfCreated(...)
 	local player_found = false
 	for i = 1, GameTooltip:NumLines() do
